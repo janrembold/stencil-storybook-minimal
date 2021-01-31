@@ -1,6 +1,6 @@
 # my-component
 
-
+Some text goes to auto generated readme.md
 
 <!-- Auto Generated Below -->
 
