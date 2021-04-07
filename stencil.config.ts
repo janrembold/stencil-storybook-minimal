@@ -15,11 +15,11 @@ export const config: Config = {
     },
     {
       type: 'docs-json',
-      file: '.tmp/docs.json'
+      file: 'node_modules/.cache/stencil/docs.json'
     },
     {
       type: 'www',
-      serviceWorker: null, // disable service workers
+      serviceWorker: null,
     },
   ],
 };
