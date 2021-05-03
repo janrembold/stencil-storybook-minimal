@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Host } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 /**
@@ -25,11 +25,25 @@ export class MyComponent {
    */
   @Prop() last: string;
 
+  /**
+   * Array of strings
+   */
+  @Prop() items: string[] = [];
+
   private getText(): string {
     return format(this.first, this.middle, this.last);
   }
 
   render() {
-    return <div>Helloooo, World! I'm {this.getText()}</div>;
+    return (
+      <Host>
+        <div>Helloooo, World! I'm {this.getText()}</div>
+        <ul>
+          {this.items.map(item => (
+            <li>{item}</li>
+          ))}
+        </ul>
+      </Host>
+    );
   }
 }
